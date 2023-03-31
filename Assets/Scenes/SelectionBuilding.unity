@@ -132,8 +132,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1056714598}
+  - component: {fileID: 1056714599}
+  - component: {fileID: 1056714600}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: SelectionManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,6 +156,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1056714599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056714597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0433260824ea7343828822cc4358986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1056714600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056714597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c71714548827954395da3db73b97724, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1914633956
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,6 +191,7 @@ GameObject:
   - component: {fileID: 1914633959}
   - component: {fileID: 1914633958}
   - component: {fileID: 1914633957}
+  - component: {fileID: 1914633960}
   m_Layer: 0
   m_Name: 'Building '
   m_TagString: Untagged
@@ -265,3 +292,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1914633960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914633956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f76a2d6f8ee20b49b686f4326b93612, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  ressource: 10
