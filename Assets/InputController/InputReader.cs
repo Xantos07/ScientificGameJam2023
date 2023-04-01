@@ -4,14 +4,14 @@ using UnityEngine.InputSystem;
 
 public class InputReader : MonoBehaviour, InputPlayer.IPlayerActions
 {
-    //private Vector2 mousePosition = new Vector2();
+    private Vector2 mousePosition = new Vector2();
     private bool click = false;
     private bool escape = false;
     
     private InputPlayer controls;
     public bool Click { get => click; set => click = value; }
     public bool Escape { get => escape; set => escape = value; }
-    //public Vector2 MousePosition { get => mousePosition; set => mousePosition = value; }
+    public Vector2 MousePosition { get => mousePosition; set => mousePosition = value; }
 
     private void Start()
     {
@@ -43,5 +43,10 @@ public class InputReader : MonoBehaviour, InputPlayer.IPlayerActions
         if(context.ReadValue<float>() == 1f) return;
         
         escape = true;
+    }
+
+    public void OnMouse(InputAction.CallbackContext context)
+    {
+        mousePosition = context.ReadValue<Vector2>();
     }
 }

@@ -3,21 +3,26 @@ using UnityEngine;
 
 public class SelectionManager : MonoBehaviour
 {
-    private InputReader input;
-    private Camera cam;
+    private InputReader _input;
+   [SerializeField] private Camera camera;
     private void Start()
     {
-        input=GetComponent<InputReader>();
+        _input=GetComponent<InputReader>();
     }
 
     private void Update()
-    {
-        //Manager pour selectionner avec un raycast ? 
-        Vector3 mousePoisition = cam.ScreenToViewportPoint(Input.mousePosition);
+    {  
+        Vector2 positionMouse = camera.ScreenToWorldPoint(Input.mousePosition);
 
-        if(input.Click)
+        RaycastHit2D hit = Physics2D.Raycast(positionMouse, Vector2.zero, 10f);
+        
+        if (hit.transform == null) return;
+
+        Debug.Log(hit.transform.name);
+
+        if(_input.Click) 
             Debug.Log("Click ! ");
         
-        input.Click = false;
+        _input.Click = false;
     }
 }
